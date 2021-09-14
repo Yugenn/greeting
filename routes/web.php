@@ -17,4 +17,4 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', 'App\Http\Controllers\ItemController@index');
+Route::get('/', 'App\Http\Controllers\GreetController@index');
