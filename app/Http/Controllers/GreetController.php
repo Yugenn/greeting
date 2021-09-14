@@ -10,22 +10,22 @@ class GreetController extends Controller
     {
         $result = '';
 
-        $hash = array('おはよう', 'こんにちは', 'こんばんは','おやすみ' );
-        $key = array_rand($hash);
-
-        if($greeting == 'random' ){
+        
+        if ($greeting == 'random') {
+            $hash = array('おはよう', 'こんにちは', 'こんばんは','おやすみ');
+            $key = array_rand($hash);
             $result = 'ランダムなメッセージ';
             $comment = $hash[$key];
-        } elseif($greeting == 'morning'){
+        } elseif($greeting == 'morning') {
             $result = '朝のあいさつ';
             $comment ='おはようございます';
-        } elseif ($greeting == 'afternoon' ){
+        } elseif ($greeting == 'afternoon') {
             $result = '昼のあいさつ';
             $comment ='こんにちは';
-        } elseif ($greeting == 'evening' ){
+        } elseif ($greeting == 'evening') {
             $result = '夕方のあいさつ';
             $comment ='こんばんは';
-        } elseif ($greeting == 'night' ){
+        } elseif ($greeting == 'night') {
             $result = '夜のあいさつ';
             $comment ='おやすみ';
         } else {
