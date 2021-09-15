@@ -13,8 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return '<h1>はじまりのぺーじ</h1>';
+});
 
-Route::get('/', 'App\Http\Controllers\GreetController@index');
+
+Route::get('/comments/freeword/{msg}', function($msg) {
+    return view('message.free', ['msg' => $msg]);
+});
+
+
+Route::get('/comments/{greeting}', [App\Http\Controllers\GreetController::class, 'result']);
